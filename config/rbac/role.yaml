@@ -1,0 +1,54 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - core.liangyuanpeng.nacos.io
+  resources:
+  - nacos
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - core.liangyuanpeng.nacos.io
+  resources:
+  - nacos/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - core.liangyuanpeng.nacos.io
+  resources:
+  - nacos/status
+  verbs:
+  - get
+  - patch
+  - update
