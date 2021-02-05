@@ -1,7 +1,7 @@
 apiVersion: core.liangyuanpeng.nacos.io/v1beta1
 kind: Nacos
 metadata:
-  name: nacos-sample
+  name: na
 spec:
   # Add fields here
   foo: bar

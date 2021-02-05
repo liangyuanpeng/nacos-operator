@@ -1,7 +1,8 @@
-# make docker-build IMG=nacos-operator:v1.3
+# make docker-build IMG=nacos-operator:v1.2
 # make install
-# make deploy IMG=nacos-operator:v1.3
+# make deploy IMG=nacos-operator:v1.2
 # Current Operator version
+# kustomize build config/default | kubectl delete -f -
 
 # Current Operator version
 VERSION ?= 0.0.1
